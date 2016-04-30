@@ -1,33 +1,26 @@
-#include <opencv2/core/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
+#include "opencv2/highgui/highgui.hpp"
 #include <iostream>
 
 using namespace cv;
 using namespace std;
 
-//Hi Kalyan! This is a test.
-//Saving
-
-int main(int argc, char** argv)
+int main(int argc, const char** argv)
 {
-	if (argc != 2)
+	Mat img = imread("C:\\Users\\Gil\\Downloads\\Doge.jpg", CV_LOAD_IMAGE_UNCHANGED); //read the image data in the file "MyPic.JPG" and store it in 'img'
+
+	if (img.empty()) //check whether the image is loaded or not
 	{
-		cout << " Usage: display_image ImageToLoadAndDisplay" << endl;
+		cout << "Error : Image cannot be loaded..!!" << endl;
+		//system("pause"); //wait for a key press
 		return -1;
 	}
 
-	Mat image;
-	image = imread(argv[1], IMREAD_COLOR); // Read the file
+	namedWindow("MyWindow", CV_WINDOW_AUTOSIZE); //create a window with the name "MyWindow"
+	imshow("MyWindow", img); //display the image which is stored in the 'img' in the "MyWindow" window
 
-	if (!image.data) // Check for invalid input
-	{
-		cout << "Could not open or find the image" << std::endl;
-		return -1;
-	}
+	waitKey(0); //wait infinite time for a keypress
 
-	namedWindow("Display window", WINDOW_AUTOSIZE); // Create a window for display.
-	imshow("Display window", image); // Show our image inside it.
+	destroyWindow("MyWindow"); //destroy the window with the name, "MyWindow"
 
-	waitKey(0); // Wait for a keystroke in the window
 	return 0;
 }
