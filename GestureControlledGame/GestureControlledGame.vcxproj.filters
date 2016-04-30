@@ -24,6 +24,12 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="GameControl.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlScheme.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -31,9 +37,5 @@
     </ClCompile>
     <ClCompile Include="GestureControlledGame.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="HandTrackingLib.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
+    </ClCompile> </ItemGroup>
 </Project>

@@ -1,9 +1,12 @@
+#include "stdafx.h"
 #include "opencv2/highgui/highgui.hpp"
 #include <iostream>
+#include "GameControl.h"
+#include <windows.h>
+#include "ControlScheme.h"
 
 using namespace cv;
 using namespace std;
-/*
 int main(int argc, const char** argv)
 {
 	Mat img = imread("C:\\Users\\Gil\\Downloads\\Doge.jpg", CV_LOAD_IMAGE_UNCHANGED); //read the image data in the file "MyPic.JPG" and store it in 'img'
