@@ -3,7 +3,7 @@
 
 using namespace cv;
 using namespace std;
-
+/*
 int main(int argc, const char** argv)
 {
 	Mat img = imread("C:\\Users\\Gil\\Downloads\\Doge.jpg", CV_LOAD_IMAGE_UNCHANGED); //read the image data in the file "MyPic.JPG" and store it in 'img'
@@ -24,3 +24,4 @@ int main(int argc, const char** argv)
 
 	return 0;
 }
+*/

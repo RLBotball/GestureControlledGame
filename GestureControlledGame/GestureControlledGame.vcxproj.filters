@@ -32,5 +32,8 @@
     <ClCompile Include="GestureControlledGame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="HandTrackingLib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
