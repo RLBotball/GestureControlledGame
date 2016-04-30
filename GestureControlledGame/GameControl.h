@@ -1,5 +1,7 @@
 #pragma once
 #include "stdafx.h"
+#include <windows.h>
+
 void pressUp();
 void pressDown();
 void pressLeft();

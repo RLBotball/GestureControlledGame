@@ -3,9 +3,20 @@
 #include <windows.h>
 #include "GameControl.h"
 
-int SCREEN_WIDTH = 100;
-int SCREEN_HEIGHT = 100;
+const int SCREEN_WIDTH = 100;
+const int SCREEN_HEIGHT = 100;
 
+void executeControl(handInfo in, int type) {
+	if (type == 1) {
+		convertSwipeHold(in);
+	} else if (type == 2) {
+		convertSwipeTap(in);
+	} else if (type == 3) {
+		convertLinear(in);
+	} else if (type == 4) {
+		convert1to1(in);
+	}
+}
 
 struct handInfo {
 	int x;
@@ -20,7 +31,7 @@ struct handInfo {
 
 struct handInfo a;
 
-handInfo convert1to1(handInfo in) {
+void convert1to1(handInfo in) {
 	struct handInfo out;
 	out.x = in.x;
 	out.y = in.y;

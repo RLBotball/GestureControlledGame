@@ -2,6 +2,9 @@
 #define WINVER 0x0500
 #include <windows.h>
 
+const int SCREEN_WIDTH = 100;
+const int SCREEN_HEIGHT = 100;
+
 void pressKey(int key) {
 	keybd_event(key, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0);
 	Sleep(100);
